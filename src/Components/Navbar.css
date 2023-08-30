@@ -1,0 +1,15 @@
+.navbar{
+    margin-top: 0px;
+    justify-content: center;
+    display: flex;
+}
+
+.brand{
+    color: yellow;
+    
+}
+
+.color-btn{
+    margin: 30px;
+    height: 30px;
+}
