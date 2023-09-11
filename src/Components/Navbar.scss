@@ -1,0 +1,11 @@
+$birutua: #172554;
+$putih1: #f3f4f6;
+$abu: #6b7280;
+
+.nav-link,.navbar-brand{
+    color: $putih1;
+}
+
+.nav-link:hover,.nav-link:active.show,.nav-link.show,.navbar-brand:hover{
+    color: $abu;
+}

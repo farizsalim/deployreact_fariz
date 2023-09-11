@@ -1,6 +1,5 @@
 import { useState } from "react"
-import Logo from "../logo.svg"
-import "./Test.css"
+import "./Test.scss"
 
 const Test = () => {
 
@@ -16,11 +15,12 @@ const tanggalID = jam.toLocaleDateString('id-ID');
 setInterval(updateJam, 1000);
 
     return(
-        <div className="test">
-            <img src={Logo} alt="logo-react" className="logo"/>
-            <h3>Welcome To DeployTest React</h3>
-            <p>{`Waktu menunjukkan ${waktuID}`}</p>
-            <p>{`Tanggal menunjukkan ${tanggalID}`}</p>
+        <div className="background">
+            <div className="test my-5">
+                <h3>Welcome to My Portofolio Website</h3>
+                <p>{`Waktu menunjukkan ${waktuID}`}</p>
+                <p>{`Tanggal menunjukkan ${tanggalID}`}</p>
+            </div>
         </div>
     )
 }

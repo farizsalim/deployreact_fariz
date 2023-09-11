@@ -1,9 +1,11 @@
+$background: #282c34;
+
 .app{
   margin: 0;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $background;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

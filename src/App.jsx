@@ -1,12 +1,12 @@
 import Navbar from "./Components/Navbar";
-import "./App.css"
+import "./App.scss"
 import Test from "./Components/Test";
 
 function App() {
   return (
     <div className="app">
       <div className="App-header">
-        <Navbar brand="Navbar" />
+        <Navbar/>
         <Test/>
       </div>
     </div>
