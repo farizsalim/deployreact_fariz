@@ -1,11 +1,21 @@
 $birutua: #172554;
 $putih1: #f3f4f6;
 $abu: #6b7280;
+$navActiveColor: $abu; // Warna saat tautan aktif
 
-.nav-link,.navbar-brand{
+.nav-link,
+.navbar-brand {
     color: $putih1;
 }
 
-.nav-link:hover,.nav-link:active.show,.nav-link.show,.navbar-brand:hover{
+.nav-link:hover,
+.nav-link:active.show,
+.nav-link.show,
+.navbar-brand:hover {
     color: $abu;
+}
+
+.nav-item.active .nav-link,
+.navbar-brand.active {
+    color: $navActiveColor; // Warna tautan saat aktif
 }
