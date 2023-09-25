@@ -39,7 +39,7 @@ const News = () => {
             <input type="text" className="form-control" placeholder="Search" value={searchs} onChange={(e) => setsearchs(e.target.value)}/>
         </div>
         {loading ? (
-        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
         ) : searchNews.length === 0 ? (
         <p className='text-center headertext'>News Not Found</p>
         ) : (
