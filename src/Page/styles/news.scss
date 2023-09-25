@@ -1,0 +1,66 @@
+$putih1: #f3f4f6;
+$hitam1: #020617;
+$abu1:  #6b7280;
+$hijau: #1e8a42;
+
+.headertext{
+    color: $putih1;
+}
+
+.title-news{
+    color: $hitam1;
+    text-decoration: none;
+    padding: 5px;
+}   
+
+.title-news:hover{
+    color: $hijau;
+}
+
+.publish-text{
+    color: $abu1;
+    padding-left: 3px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.news-img{
+    object-fit: cover;
+    height: 150px;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

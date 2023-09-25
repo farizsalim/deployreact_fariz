@@ -4,6 +4,7 @@ import Home from "./Page/Home";
 import List from "./Components/List";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Register from "./Page/Register";
+import News from "./Page/News";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/list" element={<List />} />
+            <Route path="/news" element={<News/>}/>
           </Routes>
         </div>
       </div>
