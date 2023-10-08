@@ -17,10 +17,10 @@ const News = () => {
     }
 
     axios
-      .get('https://newsapi.org/v2/top-headlines?country=us&apiKey=1b9f902748d64ba1979954419097ebd7')
+      .get('https://api-berita-indonesia.vercel.app/antara/terbaru/')
       .then((response) => {
-        const filteredNews = response.data.articles.filter((article) =>
-        article.title.toLowerCase().includes(searchs.toLowerCase())
+        const filteredNews = response.data.data.posts.filter((posts) =>
+        posts.title.toLowerCase().includes(searchs.toLowerCase())
         );
         setLoading(true)
         setSearchNews(filteredNews);
@@ -43,13 +43,13 @@ const News = () => {
         ) : searchNews.length === 0 ? (
         <p className='text-center headertext'>News Not Found</p>
         ) : (
-        searchNews.map((article, index) => (
+        searchNews.map((posts, index) => (
             <div className='col-3 card m-2 p-2' key={index} style={{ width: '18rem' }}>
-            <img src={article.urlToImage} className='news-img' alt='...' />
-            <h6 className='publish-text'>{article.publishedAt}</h6>
-            <h6 className='publish-text'>Author : {article.author}</h6>
-            <a href={article.url} className='title-news' >
-                {article.title}
+            <img src={posts.thumbnail} className='news-img' alt='...' />
+            <h6 className='publish-text'>{posts.pubDate}</h6>
+            <h6 className='publish-text'>Author : Antara News</h6>
+            <a href={posts.link} className='title-news' >
+                {posts.title}
             </a>
             </div>
         ))
