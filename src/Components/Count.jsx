@@ -1,32 +1,22 @@
-import { useState } from "react";
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { incrementCount, decrementCount } from '../App/feature/counter/actions';
 
+const Count = () => {
+    const count = useSelector((state) => state.counter);
+     const dispatch = useDispatch();
 
-const Count = ({setValuePublic}) => {
-
-    const [value,setValue] = useState(0)
-
-    const handleminus = () =>{
-        if(value > 0){
-            const newValue = value - 1;
-            console.log(newValue)
-            setValue(newValue)
-            setValuePublic(newValue)
-        }
-    }
-
-    const handleplus = () =>{
-        const newValue = value + 1;
-        console.log(newValue)
-        setValue(newValue)
-        setValuePublic(newValue)
-    }
-    return(
-        <div className="container d-flex justify-content-center my-5 ">
-                <button type="button" className="btn btn-danger mx-2" onClick={handleminus}>-</button>
-                    <h5> {value} </h5>
-                <button type="button" className="btn btn-success mx-2" onClick={handleplus}>+</button>
-        </div>
-    )
-}
+  return (
+    <div className="container d-flex justify-content-center my-5">
+      <button type="button" className="btn btn-danger mx-2" onClick={() => dispatch(decrementCount(1))}>
+        -
+      </button>
+      <h5>{count}</h5>
+      <button type="button" className="btn btn-success mx-2" onClick={() => dispatch(incrementCount(1))}>
+        +
+      </button>
+    </div>
+  );
+};
 
 export default Count;
